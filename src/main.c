@@ -1,10 +1,4 @@
 #include <SDL2/SDL.h>
-#include <SDL2/SDL_error.h>
-#include <SDL2/SDL_log.h>
-#include <SDL2/SDL_rect.h>
-#include <SDL2/SDL_surface.h>
-#include <SDL2/SDL_video.h>
-#include <complex.h>
 #include <math.h>
 #include <stdint.h>
 #include <stdio.h>
