@@ -1,8 +1,4 @@
 #include <SDL2/SDL.h>
-#include <SDL2/SDL_timer.h>
-#include <stdint.h>
-#include <stdio.h>
-#include <stdlib.h>
 
 #define PRINT_SDL_ERROR     printf("SDL Error: %s\n", SDL_GetError())
 #define WINDOW_HEIGHT       600
@@ -10,7 +6,6 @@
 #define BACKGROUND          0xFF2B353B
 #define BALL_COLOR          0xFFD24A42
 #define BRICKS_COLOR        0xFF6681AA
-#define FPS 100
 
 enum {
     BLUE,
@@ -253,7 +248,7 @@ int main(void){
         end = update(&ball, &bar, blocks, &bricks_size);
         control_input(window, &end, &bar);
         render(renderer, &ball, &bar, blocks, bricks_size);
-        SDL_Delay(1000/FPS);
+        SDL_Delay(10);
     }
     SDL_DestroyRenderer(renderer);
 REN_ERR: SDL_DestroyWindow(window);
